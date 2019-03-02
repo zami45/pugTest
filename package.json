@@ -1,0 +1,14 @@
+{
+  "name": "pugtest",
+  "version": "1.0.0",
+  "description": "we are testing pugjs templating library",
+  "main": "index.pug",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "'zami'",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.3"
+  }
+}
