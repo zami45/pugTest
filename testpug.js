@@ -8,8 +8,7 @@ const readline = require("readline").createInterface({
 const database = require("./database.json");
 
 //grab the base template
-const template = "./pugFiles/sports.pug";
-
+const template = "./pugTemplate/sports.pug";
 
 //delete existing html file if there is anys
 fs.readdir("./Resource", (error, files) => {
