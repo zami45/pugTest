@@ -8,10 +8,6 @@ html
   link(rel="stylesheet" href=cssUrl)
   title #{sports.name}
  body
-  h1 Basic Rules Of #{sports.name}
-  -const imgUrl = sports.img
-  img(src=imgUrl alt="")
-  ul
-   -const rules = sports.rules
-   each rule in rules
-    li= rule
+  include header.pug
+  include body.pug
+  include footer.pug

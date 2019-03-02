@@ -3,12 +3,14 @@
       "name": "CRICKET",
       "cssUrl": "css/cric.css",
       "rules" : ["play with a bat", "3 stumps"],
-      "img" : "images/cricket.jpeg"
+      "img" : "images/cricket.jpeg",
+      "wikiURL" : "https://en.wikipedia.org/wiki/Cricket"
     },
     "football" : {
       "name" : "FOOTBALL",
       "cssUrl" : "css/football.css",
       "rules" : ["play with a ball", "2 goal post"],
-      "img" : "images/football.jpeg"
+      "img" : "images/football.jpeg",
+      "wikiURL" : "https://en.wikipedia.org/wiki/Football"
     }
 }
