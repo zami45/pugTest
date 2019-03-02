@@ -1,0 +1,14 @@
+{
+    "cricket" :{
+      "name": "Cricket",
+      "cssUrl": "css/cric.css",
+      "rules" : ["play with a bat", "3 stumps"],
+      "img" : "images/cricket.jpeg"
+    },
+    "football" : {
+      "name" : "Football",
+      "cssUrl" : "css/football.css",
+      "rules" : ["play with a ball", "2 goal post"],
+      "img" : "images/football.jpeg"
+    }
+}

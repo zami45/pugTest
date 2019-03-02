@@ -5,40 +5,30 @@ const readline = require("readline").createInterface({
   input: process.stdin,
   output: process.stdout
 });
+const database = require("./database.json");
 
-//generate html file from pug file
+//grab the base template
+const template = "./pugFiles/sports.pug";
 
-let src = "./pugFiles/sports.pug";
-let resource = [
-  {
-    name: "Cricket",
-    cssUrl: "cric.css",
-    rules: ["play with a bat", "3 stumps"],
-    img: "cricket.jpeg"
-  },
-  {
-    name: "Football",
-    cssUrl: "football.css",
-    rules: ["play with a ball", "2 goal post"],
-    img: "football.jpeg"
-  }
-];
 
+//delete existing html file if there is anys
+fs.readdir("./Resource", (error, files) => {
+  if (error) throw error;
+  files
+    .filter(name => /.*?\.html$/.test(name))
+    .forEach(e => fs.unlinkSync("./Resource/" + e));
+});
+
+//get imaginary url name from user
 readline.question(`What's your url?`, name => {
-  fs.readdir("./Html", (error, files) => {
-    if (error) throw error;
-    files
-      .filter(name => /.*?\.html$/.test(name))
-      .forEach(e => fs.unlinkSync("./Html/" + e));
-  });
 
-  let resourceObj = {};
-  if (name === "cricket") resourceObj = { sports: resource[0] };
-  else resourceObj = { sports: resource[1] };
-  let dest = `./Html/${name}.html`;
-  let compiledFunction = pug.compileFile(src);
+  let dest = `./Resource/${name}.html`;
+  let resourceObj = { sports: database[name] };
+
+  let compiledFunction = pug.compileFile(template);
   fs.writeFile(dest, compiledFunction(resourceObj), "utf-8", () =>
     console.log("success")
   );
   readline.close();
+
 });
