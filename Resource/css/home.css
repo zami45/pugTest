@@ -95,11 +95,12 @@ body {
 }
 
 .slider--blue {
-    background: blue;
+    background: yellow;
 }
 
 .headerText {
-    font-size: 40px;
+    font-size: 35px;
+    font-weight : bold;
     color:white;
 }
   
