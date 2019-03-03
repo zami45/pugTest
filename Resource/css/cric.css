@@ -1,4 +1,77 @@
 body {
-    background-color: #000006;
-    color: white;
+  background-color: #78cc84de;
+  color: rgb(17, 14, 14);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.container.navbar {
+  background: #252530;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  float: left;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 2px;
+}
+
+.menu {
+  float: right;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu ul li {
+  float: left;
+  padding: 15px 15px;
+  cursor: pointer;
+  color: white;
+}
+
+section img {
+  width: 400px;
+}
+
+.menu ul li a {
+  color: white;
+}
+
+.menu ul li a:hover {
+  color: green;
+}
+/* clear float */
+.navbar::after,
+.menu ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-section {
+  display: block;
+  padding: 1px;
+  background-color: #252530;
+  text-align: center;
+  color: white;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: underline;
 }

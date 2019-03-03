@@ -1,16 +1,114 @@
 {
-    "cricket" :{
-      "name": "CRICKET",
-      "cssUrl": "css/cric.css",
-      "rules" : ["play with a bat", "3 stumps"],
-      "img" : "images/cricket.jpeg",
-      "wikiURL" : "https://en.wikipedia.org/wiki/Cricket"
+  "htmlFileNames": [
+    { "fname": "football.html", "template": "sportsTemplate.pug" },
+    { "fname": "cricket.html", "template": "sportsTemplate.pug" },
+    { "fname": "tennis.html", "template": "sportsTemplate.pug" },
+    { "fname": "home.html", "template": "homeTemplate.pug" }
+  ],
+  "home.html": {
+    "header": {
+      "cssUrls": ["css/owl.carousel.min.css", "css/owl.theme.default.min.css","css/home.css"],
+      "headerLinks": [
+        { "name": "Football", "href": "football.html" },
+        { "name": "Tennis", "href": "tennis.html" },
+        { "name": "Cricket", "href": "cricket.html" }
+      ]
     },
-    "football" : {
-      "name" : "FOOTBALL",
-      "cssUrl" : "css/football.css",
-      "rules" : ["play with a ball", "2 goal post"],
-      "img" : "images/football.jpeg",
-      "wikiURL" : "https://en.wikipedia.org/wiki/Football"
+    "body": {
+      "carouselContent": [
+        { "text": "Cricket", "classList": ["slider", "slider--red"] },
+        { "text": "Football", "classList": ["slider", "slider--blue"] },
+        { "text": "Tennis", "classList": ["slider", "slider--green"] }
+      ],
+      "scriptUrls" : ["js/owl.carousel.min.js","js/initCarousel.js"]
+    },
+    "footer": {
+      "wikiURL" : "contact.html",
+      "footerText" : "Contact us for regular update"
     }
+  },
+  "cricket.html": {
+    "header": {
+      "headerLinks": [
+        { "name": "Football", "href": "football.html" },
+        { "name": "Tennis", "href": "tennis.html" },
+        { "name": "Home", "href": "home.html"}
+      ],
+      "name": "CRICKET",
+      "cssUrls": ["css/cric.css"],
+      "logoSrc": "images/cricLogo.png"
+    },
+    "body": {
+      "game_rules": [
+        "Cricket is played between two teams",
+        "Games comprise of at least one innings where each team will take turns in batting and fielding/bowling.",
+        "The fielding team will have a bowler bowl the ball to the batsman who tries to hit the ball with their bat.",
+        "The fielding team must get 10 batsmen out before they can change over and start batting.",
+        "The aim of the game is to score as many runs as possible before the fielding team takes 10 wickets. The team with the most runs wins.",
+        "The team with the most run wins"
+      ],
+      "img": "images/cricket.jpeg",
+      "bodyText": "Tennis"
+    },
+    "footer": {
+      "wikiURL": "https://en.wikipedia.org/wiki/Cricket",
+      "footerText": "Visit wikipedia to know more  about  Cricket"
+    }
+  },
+
+  "football.html": {
+    "header": {
+      "headerLinks": [
+        { "name": "Cricket", "href": "cricket.html" },
+        { "name": "Tennis", "href": "tennis.html" },
+        { "name": "Home", "href": "home.html"}
+      ],
+      "name": "FOOTBALL",
+      "cssUrls": ["css/football.css"],
+      "logoSrc": "images/footLogo.jpg"
+    },
+    "body": {
+      "game_rules": [
+        "A match consists of two 45 minutes halves with a 15 minute rest period in between.",
+        "Each team can have a minimum off 11 players ",
+        "The field must be made of either artificial or natural grass",
+        "The ball must have a circumference of 58-61cm and be of a circular shape.",
+        "Each game must include one referee and two assistant referee’s "
+      ],
+      "img": "images/football.jpeg",
+      "bodyText": "Tennis"
+    },
+    "footer": {
+      "wikiURL": "https://en.wikipedia.org/wiki/Football",
+      "footerText": "Visit wikipedia to know more  about  Football"
+    }
+  },
+
+  "tennis.html": {
+    "header": {
+      "headerLinks": [
+        { "name": "Cricket", "href": "cricket.html" },
+        { "name": "Football", "href": "football.html" },
+        { "name": "Home", "href": "home.html"}
+      ],
+      "name": "Tennis",
+      "cssUrls": ["css/tennis.css"],
+      "logoSrc": "images/tennisLogo.jpg"
+    },
+    "body": {
+      "game_rules": [
+        "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
+        "The server must then serve each point from alternative sides on the base line",
+        "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
+        "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
+        "he balls in a tennis match are changed for new balls every 6 games"
+      ],
+      "img": "images/tennis.jpg",
+      "bodyText": "Tennis"
+    },
+    "footer": {
+      "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
+      "footerText": "Visit wikipedia to know more  about  Tennis"
+    }
+  }
 }

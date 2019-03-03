@@ -1,2 +1,5 @@
--const wikiUrl = sports.wikiURL
-a(href=wikiUrl alt="footbal wikipedia" target="_blank") Visit wikipedia to know more  about #{sports.name}
+-const wikiUrl = page.footer.wikiURL
+-const footerClass = ["container","footer-section"]
+footer(class=footerClass)
+ a(href=wikiUrl target="_blank") #{page.footer.footerText}
+ p copyright @2019 | synopi.com
