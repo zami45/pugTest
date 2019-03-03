@@ -97,4 +97,9 @@ body {
 .slider--blue {
     background: blue;
 }
+
+.headerText {
+    font-size: 40px;
+    color:white;
+}
   

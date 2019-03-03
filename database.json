@@ -12,7 +12,8 @@
         { "name": "Football", "href": "football.html" },
         { "name": "Tennis", "href": "tennis.html" },
         { "name": "Cricket", "href": "cricket.html" }
-      ]
+      ],
+      "headerText" : "Sports"
     },
     "body": {
       "carouselContent": [

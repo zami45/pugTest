@@ -2,7 +2,10 @@
 header(class=navClass)
  div(class="logo")
   -const logoSrc = page.header.logoSrc
+  -const headerText = page.header.headerText
   img(src=logoSrc)
+  if(headerText)
+   span(class="headerText") #{headerText}
  div(class="menu") 
   ul
    -const headerLinks = page.header.headerLinks
