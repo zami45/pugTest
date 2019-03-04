@@ -1,0 +1,35 @@
+{
+  "menu_items": [
+    {
+      "label": "Cricket",
+      "link": "cricket",
+      "submenu": [{ "label": "Recursive" }]
+    },
+    { "label": "Football", "link": "football" },
+    { "label": "Tennis", "link": "tennis" }
+  ],
+  "skeletons": {
+    "bmd": {
+      "header": { "foo": "bar" },
+      "footer": { "foo": "bar" },
+      "layout": { "foo": "bar" },
+      "color_scheme": { "foo": "bar" },
+      "grid_fashion": { "foo": "bar" },
+      "item_fashion": { "foo": "bar" },
+      "blah_blah": { "foo": "bar" }
+    },
+    "bbc": {
+      "header": { "foo": "bar" }
+    }
+  },
+  "link_definitions": {
+    "cricket": { "skeleton": "bbc", "view": "grid", "foo": "bar", "path": "/" },
+    "seo-friendly-topic-icc": {
+      "skeleton": "bmd",
+      "view": "page",
+      "foo": "bar",
+      "path": "/cricket"
+    },
+    "quotation-form": { "skeleton": "form", "inputs": ["name", "email"] }
+  }
+}
