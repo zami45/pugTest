@@ -1,0 +1,32 @@
+  {"Headers": {
+    "LayoutHeaders": {
+      "Synopi Home": {"title" : "", "meta" : []},
+      "Live": {},
+      "Natiply": {},
+      "SyncCare": {},
+      "XChange": {},
+      "Rover": {},
+      "VGate": {},
+      "Portable": {},
+      "Bootable": {},
+      "Live Quotation": {},
+      "Natiply Quotation" : {},
+      "SyncCare Quotation" : {}
+    }
+  },
+  "link_definitions": {
+    "Synopi Home" : {},
+    "Live": {
+      "skeleton": "sportsLayout",
+      "template" : "sportsTemplate",
+      "path": "/"
+    },
+    "Natiply": {
+      "skeleton": "bmd",
+      "view": "page",
+      "foo": "bar",
+      "path": "/cricket"
+    },
+    "SyncCare" : {},
+    "quotation-form": {}
+  }}

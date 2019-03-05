@@ -1,0 +1,102 @@
+{
+  "menu_items": [
+    {
+      "label": "Sports Home",
+      "link": "home.html",
+      "submenu": [
+        {
+          "label": "Cricket",
+          "link": "cricket.html",
+          "shouldGeneratePage": true,
+          "submenu": [
+            {
+              "label": "Cricket History",
+              "link": "cricketHistory.html",
+              "shouldGeneratePage": true
+            },
+            {
+              "label": "Cricket Rules",
+              "link": "cricketRules.html",
+              "shouldGeneratePage": true
+            }
+          ]
+        },
+        {
+          "label": "Football",
+          "link": "football.html",
+          "shouldGeneratePage": true,
+          "submenu": [
+            {
+              "label": "Football History",
+              "link": "footballHistory.html",
+              "shouldGeneratePage": true
+            },
+            {
+              "label": "Football Rules",
+              "link": "footballRules.html",
+              "shouldGeneratePage": true
+            }
+          ]
+        },
+        {
+          "label": "Tennis",
+          "link": "tennis.html",
+          "shouldGeneratePage": true,
+          "submenu": [
+            {
+              "label": "Tennis History",
+              "link": "tennisHistory.html",
+              "shouldGeneratePage": true
+            },
+            {
+              "label": "Tennis Rules",
+              "link": "tennisRules.html",
+              "shouldGeneratePage": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "skeletons": {
+    "sportsLayout": {
+      "headers": "sportsLayoutHeaders",
+      "name": "sportsLayout",
+      "path": "../",
+      "dependencies": {
+        "cssURLs": "",
+        "jsURLs": ""
+      }
+    }
+  },
+  "Headers": {
+    "sportsLayoutHeaders": {
+      "Sports Home": {"title" : "", "meta" : []},
+      "Cricket": {},
+      "Football": {},
+      "Tennis": {},
+      "Cricket History": {},
+      "Cricket Rules": {},
+      "Football History": {},
+      "Football Rules": {},
+      "Tennis History": {},
+      "Tennis Rules": {}
+    }
+  },
+  "link_definitions": {
+    "Sports Home" : {},
+    "cricket": {
+      "skeleton": "sportsLayout",
+      "template" : "sportsTemplate",
+      "path": "/"
+    },
+    "Cricket History": {
+      "skeleton": "bmd",
+      "view": "page",
+      "foo": "bar",
+      "path": "/cricket"
+    },
+    "Cricket " : {},
+    "quotation-form": { "skeleton": "form", "inputs": ["name", "email"] }
+  }
+}

@@ -10,7 +10,7 @@
   ],
   "skeletons": {
     "bmd": {
-      "header": { "foo": "bar" },
+      "header": "header1",
       "footer": { "foo": "bar" },
       "layout": { "foo": "bar" },
       "color_scheme": { "foo": "bar" },
@@ -20,6 +20,15 @@
     },
     "bbc": {
       "header": { "foo": "bar" }
+    }
+  },
+  "headers":{
+    "header1":{
+      "foo":"bar"
+      ,"tittle":"my nice tittle"
+    },
+    "header2":{
+      "foo":"bar"
     }
   },
   "link_definitions": {
