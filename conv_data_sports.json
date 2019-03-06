@@ -3,21 +3,32 @@
     {
       "label": "Sports Home",
       "link": "home.html",
+      "shouldGeneratePage": true,
+      "template" : "sportsTemplate.pug",
       "submenu": [
         {
           "label": "Cricket",
           "link": "cricket.html",
           "shouldGeneratePage": true,
+          "template" : "sportsTemplate.pug",
           "submenu": [
             {
               "label": "Cricket History",
               "link": "cricketHistory.html",
-              "shouldGeneratePage": true
+              "shouldGeneratePage": true,
+              "template" : "sportsTemplate.pug"
             },
             {
               "label": "Cricket Rules",
               "link": "cricketRules.html",
-              "shouldGeneratePage": true
+              "shouldGeneratePage": true,
+              "template" : "sportsTemplate.pug"
+            },
+            {
+              "label": "Cricket Nations",
+              "link": "cricketNations.html",
+              "shouldGeneratePage": true,
+              "template" : "sportsTemplate.pug"
             }
           ]
         },
@@ -25,16 +36,19 @@
           "label": "Football",
           "link": "football.html",
           "shouldGeneratePage": true,
+          "template":"sportsTemplate.pug",
           "submenu": [
             {
               "label": "Football History",
               "link": "footballHistory.html",
-              "shouldGeneratePage": true
+              "shouldGeneratePage": true,
+              "template":"sportsTemplate.pug"
             },
             {
               "label": "Football Rules",
               "link": "footballRules.html",
-              "shouldGeneratePage": true
+              "shouldGeneratePage": true,
+              "template" : "sportsTemplate.pug"
             }
           ]
         },
@@ -42,16 +56,19 @@
           "label": "Tennis",
           "link": "tennis.html",
           "shouldGeneratePage": true,
+          "template" : "sportsTemplate.pug",
           "submenu": [
             {
               "label": "Tennis History",
               "link": "tennisHistory.html",
-              "shouldGeneratePage": true
+              "shouldGeneratePage": true,
+              "template" : "sportsTemplate.pug"
             },
             {
               "label": "Tennis Rules",
               "link": "tennisRules.html",
-              "shouldGeneratePage": true
+              "shouldGeneratePage": true,
+              "template" : "sportsTemplate.pug"
             }
           ]
         }
@@ -60,9 +77,8 @@
   ],
   "skeletons": {
     "sportsLayout": {
-      "headers_defination": "sportsLayoutHeaders",
       "name": "sportsLayout",
-      "path": "../",
+      "path": "./sportsLayout/layout",
       "dependencies": {
         "cssURLs": "",
         "jsURLs": ""
@@ -70,31 +86,29 @@
     }
   },
   "headers_definations": {
-    "sportsLayoutHeaders": {
-      "Sports Home": { "title": "Home" },
-      "Cricket": { "title": "Cricket" },
-      "Football": { "title": "Football" },
-      "Tennis": { "title": "Tennis" },
-      "Cricket History": { "title": "Cricket History" },
-      "Cricket Rules": { "title": "Cricket Rules" },
-      "Football History": { "title": "Football History" },
-      "Football Rules": { "title": "Football Rules" },
-      "Tennis History": { "title": "Tennis History" },
-      "Tennis Rules": { "title": "Tennis Rules" }
-    }
+    "Sports Home": { "title": "Home" },
+    "Cricket": { "title": "Cricket" },
+    "Football": { "title": "Football" },
+    "Tennis": { "title": "Tennis" },
+    "Cricket History": { "title": "Cricket History" },
+    "Cricket Rules": { "title": "Cricket Rules" },
+    "Football History": { "title": "Football History" },
+    "Football Rules": { "title": "Football Rules" },
+    "Tennis History": { "title": "Tennis History" },
+    "Tennis Rules": { "title": "Tennis Rules" }
   },
   "link_definitions": {
-    "Sports Home": {
-      "header": {
-        "headerLinks": [
+    "commonHeader":{
+        "TopheaderLinks": [
           { "name": "Cricket", "href": "cricket.html" },
           { "name": "Tennis", "href": "tennis.html" },
-          { "name": "Home", "href": "home.html" }
+          { "name": "Football", "href": "football.html" }
         ],
-        "name": "FOOTBALL",
-        "cssUrls": ["css/football.css"],
-        "logoSrc": "images/footLogo.jpg"
-      },
+        "name": "Home",
+        "logoSrc": "images/footLogo.jpg",
+        "cssUrls" : ["css/cric.css"]
+    },
+    "Sports Home": {
       "body": {
         "game_rules": [
           "A match consists of two 45 minutes halves with a 15 minute rest period in between.",
@@ -114,13 +128,13 @@
     "Cricket": {
       "header": {
         "headerLinks": [
-          { "name": "Cricket", "href": "cricket.html" },
-          { "name": "Football", "href": "football.html" },
-          { "name": "Home", "href": "home.html" }
+          { "name": "Cricket History", "href": "cricketHistory.html" },
+          { "name": "Cricket Rules", "href": "cricketRules.html" },
+          { "name": "Cricket Nations", "href" : "cricketNations.html"}
         ],
-        "name": "Tennis",
+        "name": "Cricket",
         "cssUrls": ["css/tennis.css"],
-        "logoSrc": "images/tennisLogo.jpg"
+        "logoSrc": "images/cricLogo.jpg"
       },
       "body": {
         "game_rules": [
@@ -141,9 +155,8 @@
     "Football": {
       "header": {
         "headerLinks": [
-          { "name": "Cricket", "href": "cricket.html" },
-          { "name": "Tennis", "href": "tennis.html" },
-          { "name": "Home", "href": "home.html" }
+          { "name": "Football History", "href": "footballHistory.html" },
+          { "name": "Football Rules", "href": "footballRules.html" }
         ],
         "name": "FOOTBALL",
         "cssUrls": ["css/football.css"],
@@ -168,9 +181,8 @@
     "Tennis": {
       "header": {
         "headerLinks": [
-          { "name": "Cricket", "href": "cricket.html" },
-          { "name": "Football", "href": "football.html" },
-          { "name": "Home", "href": "home.html" }
+          { "name": "Tennis History", "href": "tennisHistory.html" },
+          { "name": "Tennis Rules", "href": "tennisRules.html" }
         ],
         "name": "Tennis",
         "cssUrls": ["css/tennis.css"],
@@ -192,70 +204,146 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Cricket History" : {
-  
-        "header": {
-          "headerLinks": [
-            { "name": "Cricket", "href": "cricket.html" },
-            { "name": "Football", "href": "football.html" },
-            { "name": "Home", "href": "home.html"}
-          ],
-          "name": "Tennis",
-          "cssUrls": ["css/tennis.css"],
-          "logoSrc": "images/tennisLogo.jpg"
-        },
-        "body": {
-          "game_rules": [
-            "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
-            "The server must then serve each point from alternative sides on the base line",
-            "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
-            "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
-            "he balls in a tennis match are changed for new balls every 6 games"
-          ],
-          "img": "images/tennis.jpg",
-          "bodyText": "Tennis"
-        },
-        "footer": {
-          "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
-          "footerText": "Visit wikipedia to know more  about  Tennis"
-        }
+    "Cricket History": {
+      "header": {
+        "headerLinks": [
+          { "name": "Cricket History", "href": "cricketHistory.html" },
+          { "name": "Cricket Rules", "href": "cricketRules.html" },
+          { "name": "Cricket Nations", "href" : "cricketNations.html"}
+        ],
+        "name": "Cricket History",
+        "cssUrls": ["css/cric.css"],
+        "logoSrc": "images/cricLogo.jpg"
+      },
+      "body": {
+        "game_rules": [
+          "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
+          "The server must then serve each point from alternative sides on the base line",
+          "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
+          "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
+          "he balls in a tennis match are changed for new balls every 6 games"
+        ],
+        "img": "images/cricket.jpg",
+        "bodyText": "Cricket"
+      },
+      "footer": {
+        "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
+        "footerText": "Visit wikipedia to know more  about  Tennis"
+      }
     },
-    "Cricket Rules" : {
-    
-        "header": {
-          "headerLinks": [
-            { "name": "Cricket", "href": "cricket.html" },
-            { "name": "Football", "href": "football.html" },
-            { "name": "Home", "href": "home.html"}
-          ],
-          "name": "Tennis",
-          "cssUrls": ["css/tennis.css"],
-          "logoSrc": "images/tennisLogo.jpg"
-        },
-        "body": {
-          "game_rules": [
-            "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
-            "The server must then serve each point from alternative sides on the base line",
-            "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
-            "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
-            "he balls in a tennis match are changed for new balls every 6 games"
-          ],
-          "img": "images/tennis.jpg",
-          "bodyText": "Tennis"
-        },
-        "footer": {
-          "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
-          "footerText": "Visit wikipedia to know more  about  Tennis"
-        }
+    "Cricket Nations" : {
+      "header": {
+        "headerLinks": [
+          { "name": "Cricket History", "href": "cricketHistory.html" },
+          { "name": "Cricket Rules", "href": "cricketRules.html" },
+          { "name": "Cricket Nations", "href" : "cricketNations.html"}
+        ],
+        "name": "Cricket History",
+        "cssUrls": ["css/cric.css"],
+        "logoSrc": "images/cricLogo.jpg"
+      },
+      "body": {
+        "game_rules": [
+          "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
+          "The server must then serve each point from alternative sides on the base line",
+          "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
+          "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
+          "he balls in a tennis match are changed for new balls every 6 games"
+        ],
+        "img": "images/tennis.jpg",
+        "bodyText": "Tennis"
+      },
+      "footer": {
+        "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
+        "footerText": "Visit wikipedia to know more  about  Tennis"
+      }
     },
-    "Football History" : { 
+    "Cricket Rules": {
       "header": {
         "headerLinks": [
-          { "name": "Cricket", "href": "cricket.html" },
-          { "name": "Football", "href": "football.html" },
-          { "name": "Home", "href": "home.html"}
+          { "name": "Cricket History", "href": "cricketHistory.html" },
+          { "name": "Cricket Rules", "href": "cricketRules.html" },
+          { "name": "Cricket Nations", "href" : "cricketNations.html"}
         ],
-        "name": "Tennis",
+        "name": "Cricket Rules",
+        "cssUrls": ["css/cric.css"],
+        "logoSrc": "images/cricLogo.jpg"
+      },
+      "body": {
+        "game_rules": [
+          "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
+          "The server must then serve each point from alternative sides on the base line",
+          "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
+          "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
+          "he balls in a tennis match are changed for new balls every 6 games"
+        ],
+        "img": "images/tennis.jpg",
+        "bodyText": "Tennis"
+      },
+      "footer": {
+        "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
+        "footerText": "Visit wikipedia to know more  about  Tennis"
+      }
+    },
+    "Football History": {
+      "header": {
+        "headerLinks": [
+          { "name": "Football History", "href": "footballHistory.html" },
+          { "name": "Football Rules", "href": "footballRules.html" }
+        ],
+        "name": "Football History",
+        "cssUrls": ["css/football.css"],
+        "logoSrc": "images/footLogo.jpg"
+      },
+      "body": {
+        "game_rules": [
+          "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
+          "The server must then serve each point from alternative sides on the base line",
+          "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
+          "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
+          "he balls in a tennis match are changed for new balls every 6 games"
+        ],
+        "img": "images/tennis.jpg",
+        "bodyText": "Tennis"
+      },
+      "footer": {
+        "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
+        "footerText": "Visit wikipedia to know more  about  Tennis"
+      }
+    },
+    "Football Rules": {
+      "header": {
+        "headerLinks": [
+          { "name": "Football History", "href": "footballHistory.html" },
+          { "name": "Football Rules", "href": "footballRules.html" }
+        ],
+        "name": "Football Rules",
+        "cssUrls": ["css/football.css"],
+        "logoSrc": "images/footLogo.jpg"
+      },
+      "body": {
+        "game_rules": [
+          "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
+          "The server must then serve each point from alternative sides on the base line",
+          "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
+          "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
+          "he balls in a tennis match are changed for new balls every 6 games"
+        ],
+        "img": "images/tennis.jpg",
+        "bodyText": "Tennis"
+      },
+      "footer": {
+        "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
+        "footerText": "Visit wikipedia to know more  about  Tennis"
+      }
+    },
+    "Tennis History": {
+      "header": {
+        "headerLinks": [
+          { "name": "Tennis History", "href": "tennisHistory.html" },
+          { "name": "Tennis Rules", "href": "tennisRules.html" }
+        ],
+        "name": "Tennis History",
         "cssUrls": ["css/tennis.css"],
         "logoSrc": "images/tennisLogo.jpg"
       },
@@ -273,15 +361,15 @@
       "footer": {
         "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
         "footerText": "Visit wikipedia to know more  about  Tennis"
-      }},
-    "Football Rules" : { 
+      }
+    },
+    "Tennis Rules": {
       "header": {
         "headerLinks": [
-          { "name": "Cricket", "href": "cricket.html" },
-          { "name": "Football", "href": "football.html" },
-          { "name": "Home", "href": "home.html"}
+          { "name": "Tennis History", "href": "tennisHistory.html" },
+          { "name": "Tennis Rules", "href": "tennisRules.html" }
         ],
-        "name": "Tennis",
+        "name": "Tennis Rules",
         "cssUrls": ["css/tennis.css"],
         "logoSrc": "images/tennisLogo.jpg"
       },
@@ -299,58 +387,7 @@
       "footer": {
         "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
         "footerText": "Visit wikipedia to know more  about  Tennis"
-      }},
-    "Tennis History" : {
-      "header": {
-        "headerLinks": [
-          { "name": "Cricket", "href": "cricket.html" },
-          { "name": "Football", "href": "football.html" },
-          { "name": "Home", "href": "home.html"}
-        ],
-        "name": "Tennis",
-        "cssUrls": ["css/tennis.css"],
-        "logoSrc": "images/tennisLogo.jpg"
-      },
-      "body": {
-        "game_rules": [
-          "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
-          "The server must then serve each point from alternative sides on the base line",
-          "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
-          "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
-          "he balls in a tennis match are changed for new balls every 6 games"
-        ],
-        "img": "images/tennis.jpg",
-        "bodyText": "Tennis"
-      },
-      "footer": {
-        "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
-        "footerText": "Visit wikipedia to know more  about  Tennis"
-      }},
-    "Tennis Rules" : { 
-      "header": {
-        "headerLinks": [
-          { "name": "Cricket", "href": "cricket.html" },
-          { "name": "Football", "href": "football.html" },
-          { "name": "Home", "href": "home.html"}
-        ],
-        "name": "Tennis",
-        "cssUrls": ["css/tennis.css"],
-        "logoSrc": "images/tennisLogo.jpg"
-      },
-      "body": {
-        "game_rules": [
-          "The game starts with a coin toss to determine which player must serve first and which side they want to serve from",
-          "The server must then serve each point from alternative sides on the base line",
-          "If the server fails to get their first serve in they may take advantage of a second serve. If they again fail to get their second serve in then a double fault will be called and the point lost",
-          "The ball can hit any part of the line for the point to be called in, outside the line and the ball is out.",
-          "he balls in a tennis match are changed for new balls every 6 games"
-        ],
-        "img": "images/tennis.jpg",
-        "bodyText": "Tennis"
-      },
-      "footer": {
-        "wikiURL": "https://en.wikipedia.org/wiki/Tennis",
-        "footerText": "Visit wikipedia to know more  about  Tennis"
-      }}
+      }
+    }
   }
 }

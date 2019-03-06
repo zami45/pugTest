@@ -1,44 +1,64 @@
 {
   "menu_items": [
     {
-      "label": "Cricket",
-      "link": "cricket",
-      "submenu": [{ "label": "Recursive" }]
-    },
-    { "label": "Football", "link": "football" },
-    { "label": "Tennis", "link": "tennis" }
+      "label": "Synopi_Home",
+      "link": "home.html",
+      "shouldGeneratePage": true,
+      "submenu": [
+        {
+          "label": "Synopi_Live",
+          "link": "live.html",
+          "shouldGeneratePage": true,
+          "submenu": [
+            {
+              "label": "Rover",
+              "link": "rover.html",
+              "shouldGeneratePage": false
+            },
+            {
+              "label": "Vgate",
+              "link": "vgate.html",
+              "shouldGeneratePage": true
+            }
+          ]
+        },
+        {
+          "label": "Synopi_Natiply",
+          "link": ""
+        }
+      ]
+    }
   ],
   "skeletons": {
-    "bmd": {
-      "header": "header1",
-      "footer": { "foo": "bar" },
-      "layout": { "foo": "bar" },
-      "color_scheme": { "foo": "bar" },
-      "grid_fashion": { "foo": "bar" },
-      "item_fashion": { "foo": "bar" },
-      "blah_blah": { "foo": "bar" }
+    "synopi_layout": {
+      "name": "synopiLayout",
+      "location": "../pathToLayout",
+      "common_dependencies": {
+        "cssURLs": ["css1","css2"],
+        "jsURLs": ["js1","js2"]
+      }
     },
-    "bbc": {
-      "header": { "foo": "bar" }
-    }
+    "bbc_layout": {},
+    "cnn_layout": {}
   },
-  "headers":{
-    "header1":{
-      "foo":"bar"
-      ,"tittle":"my nice tittle"
+  "headers_definitions": {
+    "Synopi_Home": {
+      "tittle": "Home",
+      "meta_data": []
     },
-    "header2":{
-      "foo":"bar"
-    }
+    "Synopi_Live": {},
+    "Rover": {},
+    "Vgate": {},
+    "Synopi_Natiply":{}
+  },
+  "footer_definitions": {
+
   },
   "link_definitions": {
-    "cricket": { "skeleton": "bbc", "view": "grid", "foo": "bar", "path": "/" },
-    "seo-friendly-topic-icc": {
-      "skeleton": "bmd",
-      "view": "page",
-      "foo": "bar",
-      "path": "/cricket"
-    },
-    "quotation-form": { "skeleton": "form", "inputs": ["name", "email"] }
+    "Synopi_Home": { "template": "home.pug","template_location": "/" },
+    "Rover": { "template": "form.pug", "template_location":"","inputs": ["name", "email"] },
+    "Synopi_Live": {},
+    "Vgate": {},
+    "Synopi_Natiply":{}
   }
 }

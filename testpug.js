@@ -1,9 +1,9 @@
 //import necessary libraries, dataset & base-template
 const pug = require("pug");
 const fs = require("fs");
-const database = require("./database.json");
+const database = require("./conv_data_sports.json");
 const template = "./pageTemplate/sportsTemplate.pug";
-const htmlFileNames = database["htmlFileNames"];
+const htmlFileNames = database["menu_items"];
 
 //delete existing html file from Resource directory if there is anys
 fs.readdirSync("./Resource", (error, files) => {

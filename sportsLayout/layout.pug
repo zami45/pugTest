@@ -4,11 +4,11 @@ html
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
   meta(http-equiv="X-UA-Compatible" content="ie=edge")
-  -const cssUrl = page.header.cssUrls
+  
+  -const cssUrl = page.commonHeader.cssUrls
   each url in cssUrl
    link(rel="stylesheet" href=url)
-  title #{page.header.name}
-  script(type="text/javascript" src="")
+
  body
   include header.pug
   block body-content
