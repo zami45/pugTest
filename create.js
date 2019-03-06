@@ -5,16 +5,9 @@ const database = require("./conv_data_sports.json");
 const htmlFileNames = database["menu_items"];
 
 //delete existing html file from Resource directory if there is any
-fs.readdirSync("./Resource", (error, files) => {
-  if (error) throw error;
-  files
-    .filter(fname => /.*?\.html$/.test(fname))
-    .forEach(filename =>
-      fs.unlinkSync("./Resource/" + filename, () => {
-        console.log(filename);
-      })
-    );
-});
+fs.readdirSync("./Resource")
+  .filter(item => /.*?\.html$/.test(item))
+  .forEach(htmlfile => fs.unlinkSync("./Resource/" + htmlfile));
 
 //traverse menuitems
 traverseMenuItemsRecursive(htmlFileNames);
