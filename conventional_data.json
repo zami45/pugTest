@@ -55,8 +55,8 @@
 
   },
   "link_definitions": {
-    "Synopi_Home": { "template": "home.pug","template_location": "/" },
-    "Rover": { "template": "form.pug", "template_location":"","inputs": ["name", "email"] },
+    "Synopi_Home": { "template": "example.pug.pug","data":{}},
+    "Rover": { "template": "form.pug","inputs": ["name", "email"], "data":{}},
     "Synopi_Live": {},
     "Vgate": {},
     "Synopi_Natiply":{}

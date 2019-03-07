@@ -4,31 +4,26 @@
       "label": "Sports Home",
       "link": "home.html",
       "shouldGeneratePage": true,
-      "template" : "sportsTemplate.pug",
       "submenu": [
         {
           "label": "Cricket",
           "link": "cricket.html",
           "shouldGeneratePage": true,
-          "template" : "sportsTemplate.pug",
           "submenu": [
             {
               "label": "Cricket History",
               "link": "cricketHistory.html",
-              "shouldGeneratePage": true,
-              "template" : "sportsTemplate.pug"
+              "shouldGeneratePage": true
             },
             {
               "label": "Cricket Rules",
               "link": "cricketRules.html",
-              "shouldGeneratePage": true,
-              "template" : "sportsTemplate.pug"
+              "shouldGeneratePage": true
             },
             {
               "label": "Cricket Nations",
               "link": "cricketNations.html",
-              "shouldGeneratePage": true,
-              "template" : "sportsTemplate.pug"
+              "shouldGeneratePage": true
             }
           ]
         },
@@ -36,19 +31,16 @@
           "label": "Football",
           "link": "football.html",
           "shouldGeneratePage": true,
-          "template":"sportsTemplate.pug",
           "submenu": [
             {
               "label": "Football History",
               "link": "footballHistory.html",
-              "shouldGeneratePage": true,
-              "template":"sportsTemplate.pug"
+              "shouldGeneratePage": true
             },
             {
               "label": "Football Rules",
               "link": "footballRules.html",
-              "shouldGeneratePage": true,
-              "template" : "sportsTemplate.pug"
+              "shouldGeneratePage": true
             }
           ]
         },
@@ -56,19 +48,16 @@
           "label": "Tennis",
           "link": "tennis.html",
           "shouldGeneratePage": true,
-          "template" : "sportsTemplate.pug",
           "submenu": [
             {
               "label": "Tennis History",
               "link": "tennisHistory.html",
-              "shouldGeneratePage": true,
-              "template" : "sportsTemplate.pug"
+              "shouldGeneratePage": true
             },
             {
               "label": "Tennis Rules",
               "link": "tennisRules.html",
-              "shouldGeneratePage": true,
-              "template" : "sportsTemplate.pug"
+              "shouldGeneratePage": true
             }
           ]
         }
@@ -109,6 +98,7 @@
         "cssUrls" : ["css/cric.css"]
     },
     "Sports Home": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "body": {
         "game_rules": [
           "A match consists of two 45 minutes halves with a 15 minute rest period in between.",
@@ -126,6 +116,7 @@
       }
     },
     "Cricket": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -153,6 +144,7 @@
       }
     },
     "Football": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Football History", "href": "footballHistory.html" },
@@ -179,6 +171,7 @@
       }
     },
     "Tennis": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Tennis History", "href": "tennisHistory.html" },
@@ -205,6 +198,7 @@
       }
     },
     "Cricket History": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -232,6 +226,7 @@
       }
     },
     "Cricket Nations" : {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -259,6 +254,7 @@
       }
     },
     "Cricket Rules": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -286,6 +282,7 @@
       }
     },
     "Football History": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Football History", "href": "footballHistory.html" },
@@ -312,6 +309,7 @@
       }
     },
     "Football Rules": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Football History", "href": "footballHistory.html" },
@@ -338,6 +336,7 @@
       }
     },
     "Tennis History": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Tennis History", "href": "tennisHistory.html" },
@@ -364,6 +363,7 @@
       }
     },
     "Tennis Rules": {
+      "template":"./pageTemplate/sportsTemplate.pug",
       "header": {
         "headerLinks": [
           { "name": "Tennis History", "href": "tennisHistory.html" },

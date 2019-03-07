@@ -5,7 +5,7 @@ const database = require("./conv_data_sports.json");
 const htmlFileNames = database["menu_items"];
 
 //delete existing html file from Resource directory if there is any
-deleteAllHtmlFile()
+//deleteAllHtmlFile()
 
 //traverse menuitems
 traverseMenuItemsRecursive(htmlFileNames);
@@ -13,12 +13,10 @@ traverseMenuItemsRecursive(htmlFileNames);
 //to generate .html file
 function generateHtml(eachMenu) {
   let dest = `./Resource/${eachMenu.link}`;
-  let template = `./pageTemplate/${eachMenu.template}`;
-  let resourceObj = { page: database["link_definitions"][eachMenu.label] };
-  resourceObj.page.commonHeader = database["link_definitions"]["commonHeader"];
-
-  let compiledFunction = pug.compileFile(template);
-  fs.writeFile(dest, compiledFunction(resourceObj), "utf-8", () =>
+  let linkDefinition = { page: database["link_definitions"][eachMenu.label] };
+  linkDefinition.page.commonHeader = database["link_definitions"]["commonHeader"];
+  let compiledFunction = pug.compileFile(linkDefinition.page.template);
+  fs.writeFile(dest, compiledFunction(linkDefinition), "utf-8", () =>
     console.log(eachMenu.link + "-successfully generated.")
   );
 }
@@ -37,7 +35,11 @@ function traverseMenuItemsRecursive(menuItems = []) {
 }
 
 function deleteAllHtmlFile() {
-  fs.readdirSync("./Resource")
+  try{
+    fs.readdirSync("./Resource")
     .filter(item => /.*?\.html$/.test(item))
     .forEach(htmlfile => fs.unlinkSync("./Resource/" + htmlfile));
+  }catch(e){
+    console.log(e)
+  }
 }
