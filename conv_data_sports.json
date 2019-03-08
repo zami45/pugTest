@@ -65,11 +65,11 @@
     }
   ],
   "skeletons": {
-    "sportsLayout": {
+    "sportsTemplate": {
       "name": "sportsLayout",
-      "path": "./sportsLayout/layout",
-      "dependencies": {
-        "cssURLs": "",
+      "path": "./templates/sportsTemplate",
+      "resources": {
+        "cssURLs": "cric.css",
         "jsURLs": ""
       }
     }
@@ -97,8 +97,9 @@
         "logoSrc": "images/footLogo.jpg",
         "cssUrls" : ["css/cric.css"]
     },
-    "Sports Home": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "home.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "body": {
         "game_rules": [
           "A match consists of two 45 minutes halves with a 15 minute rest period in between.",
@@ -115,8 +116,9 @@
         "footerText": "Visit wikipedia to know more  about  Football"
       }
     },
-    "Cricket": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "cricket.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -143,8 +145,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Football": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "football.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Football History", "href": "footballHistory.html" },
@@ -170,8 +173,9 @@
         "footerText": "Visit wikipedia to know more  about  Football"
       }
     },
-    "Tennis": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "tennis.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Tennis History", "href": "tennisHistory.html" },
@@ -197,8 +201,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Cricket History": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "cricketHistory.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -225,8 +230,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Cricket Nations" : {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "cricketNations.html" : {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -253,8 +259,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Cricket Rules": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "cricketRules.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Cricket History", "href": "cricketHistory.html" },
@@ -281,8 +288,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Football History": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "footballHistory.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Football History", "href": "footballHistory.html" },
@@ -308,8 +316,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Football Rules": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "footballRules.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Football History", "href": "footballHistory.html" },
@@ -335,8 +344,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Tennis History": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "tennisHistory.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Tennis History", "href": "tennisHistory.html" },
@@ -362,8 +372,9 @@
         "footerText": "Visit wikipedia to know more  about  Tennis"
       }
     },
-    "Tennis Rules": {
-      "template":"./pageTemplate/sportsTemplate.pug",
+    "tennisRules.html": {
+      "template":"page.pug",
+      "skeleton":"sportsTemplate",
       "header": {
         "headerLinks": [
           { "name": "Tennis History", "href": "tennisHistory.html" },

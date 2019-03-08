@@ -21,3 +21,13 @@ if page.header
         each link in headerLinks
           li 
             a(href=link.href) #{link.name} 
+
+-const contentClass = ["container","body-section"]
+-const imgUrl = page.body.img
+section(class=contentClass)
+    h1 Basic Rules of #{page.body.bodyText}
+    img(src=imgUrl alt="")
+    ul
+    -const rules = page.body.game_rules
+    each rule in rules
+        li= rule
