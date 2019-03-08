@@ -5,7 +5,7 @@ const database = require("./conv_data_sports.json");
 const htmlFileNames = database["menu_items"];
 
 //delete existing html file from Resource directory if there is any
-//deleteAllHtmlFile()
+deleteAllHtmlFile()
 
 //traverse menuitems
 traverseMenuItemsRecursive(htmlFileNames);
