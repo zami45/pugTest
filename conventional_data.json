@@ -31,34 +31,34 @@
   ],
   "skeletons": {
     "synopi_layout": {
-      "name": "synopiLayout",
-      "location": "../pathToLayout",
-      "common_dependencies": {
-        "cssURLs": ["css1","css2"],
-        "jsURLs": ["js1","js2"]
+      "name": "synopi",
+      "path": "./templates/synopi",
+      "resources": {
+        "cssURLs": "cric.css",
+        "jsURLs": ""
       }
     },
     "bbc_layout": {},
     "cnn_layout": {}
   },
   "headers_definitions": {
-    "Synopi_Home": {
+    "home.html": {
       "tittle": "Home",
       "meta_data": []
     },
-    "Synopi_Live": {},
-    "Rover": {},
-    "Vgate": {},
-    "Synopi_Natiply":{}
+    "live.html": {},
+    "rover.html": {},
+    "vgate.html": {},
+    "natiply.html":{}
   },
   "footer_definitions": {
 
   },
   "link_definitions": {
-    "Synopi_Home": { "template": "example.pug.pug","data":{}},
-    "Rover": { "template": "form.pug","inputs": ["name", "email"], "data":{}},
-    "Synopi_Live": {},
-    "Vgate": {},
-    "Synopi_Natiply":{}
+    "home.html": { "template": "example.pug.pug","skeleton":"synopi_layout","data":{}},
+    "rover.html": { "template": "form.pug","skeleton":"synopi_layout","data":{"inputs": ["name", "email"]}},
+    "live.html": {},
+    "vgate.html": {},
+    "natiply.html":{}
   }
 }
